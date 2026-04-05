@@ -2,7 +2,8 @@
 const nextConfig = {
   output: 'export',
   basePath: '/Ash-Flow',
-  assetPrefix: '/Ash-Flow', // No trailing slash here
+  assetPrefix: '/Ash-Flow/',  // trailing slash recommended
+  trailingSlash: true,         // add this — prevents 404s on direct URL visits
   images: {
     unoptimized: true,
   },
