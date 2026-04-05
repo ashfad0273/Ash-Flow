@@ -1,8 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',      // CRITICAL: This allows GitHub to host it
-  images: { 
-    unoptimized: true    // Required for static export
+  output: 'export',
+  basePath: '/Ash-Flow', // This MUST match your GitHub repo name exactly
+  images: {
+    unoptimized: true,
   },
 };
 
