@@ -1,10 +1,10 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   output: 'export',
-  basePath: '/Ash-Flow', // CRITICAL: This must match your repo name exactly
+  basePath: '/Ash-Flow',
+  assetPrefix: '/Ash-Flow/', // ADD THIS LINE
   images: {
-    unoptimized: true, 
+    unoptimized: true,
   },
 };
 
