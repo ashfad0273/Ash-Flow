@@ -1,9 +1,10 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
   output: 'export',
-  basePath: '/Ash-Flow', // This MUST match your GitHub repo name exactly
+  basePath: '/Ash-Flow', // CRITICAL: This must match your repo name exactly
   images: {
-    unoptimized: true,
+    unoptimized: true, 
   },
 };
 
