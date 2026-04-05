@@ -3,16 +3,16 @@ import { useState } from 'react';
 import { ashCompressEngine } from './utils/compressor';
 import { Upload, Download, Eye, Layers, Zap } from 'lucide-react';
 
-// ✅ Add the type here, outside the component
+
 type CompressionLevel = 'balanced' | 'aggressive' | 'maximum';
 
 export default function AshFlow() {
   const [results, setResults] = useState<any[]>([]);
   const [selectedFormats, setSelectedFormats] = useState(['webp']);
   const [comparing, setComparing] = useState<any>(null);
-  const [compressionLevel, setCompressionLevel] = useState<CompressionLevel>('aggressive'); // ✅ Add this
+  const [compressionLevel, setCompressionLevel] = useState<CompressionLevel>('aggressive'); 
 
-  const formats = ['png', 'jpeg', 'webp']; // ✅ removed avif
+  const formats = ['png', 'jpeg', 'webp']; // 
 
   // ✅ Pass compressionLevel into the engine here
   const handleUpload = async (e: any) => {
@@ -22,7 +22,7 @@ export default function AshFlow() {
     for (const file of rawFiles) {
       const originalUrl = URL.createObjectURL(file);
       for (const format of selectedFormats) {
-        const compressed = await ashCompressEngine(file, format, 0.85, compressionLevel); // ✅ here
+        const compressed = await ashCompressEngine(file, format, 0.85, compressionLevel);
         allProcessed.push({
           originalName: file.name,
           originalUrl,
