@@ -12,13 +12,13 @@ const COMPRESSION_PROFILES: Record<CompressionLevel, object> = {
   aggressive: {
     maxSizeMB: 0.8,
     initialQuality: 0.7,
-    maxWidthOrHeight: 2560,
+    maxWidthOrHeight: 4096,
     alwaysKeepResolution: true,
   },
   maximum: {
     maxSizeMB: 0.3,
     initialQuality: 0.5,
-    maxWidthOrHeight: 1920,
+    maxWidthOrHeight: 4096,
     alwaysKeepResolution: true,
   },
 };
